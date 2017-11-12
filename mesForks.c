@@ -1,3 +1,7 @@
+/*
+	Exemple given for use the functions fork() and wait()
+*/
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<unistd.h>

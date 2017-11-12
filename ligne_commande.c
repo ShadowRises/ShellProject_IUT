@@ -1,3 +1,7 @@
+/*
+    Given functions to use in the project
+*/
+
 /**
  * Pour la documentation, voir ligne_commande_v2.h .
  */
