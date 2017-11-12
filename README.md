@@ -1,6 +1,6 @@
 # Shell Project for the IUT
 
-  An alternative shell project for the IUT.
+  An alternative shell project for Unix system for the IUT.
 
 ## Exit commands :
 
