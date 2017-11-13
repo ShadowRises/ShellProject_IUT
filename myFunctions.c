@@ -14,8 +14,8 @@ int command(char** line) {
     pid = fork();
     if(pid == 0) {
         testCommand = execvp(line[0], line);
-        if(testCommand == -1) {
-            perror("Error ");
+        if(testCommand < 0) {
+            perror("Unknow command ");
             exit(-1);
         } else {
             WEXITSTATUS(returnCommand);
