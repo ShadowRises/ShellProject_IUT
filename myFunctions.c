@@ -8,8 +8,8 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
-int command(char** line) {
-    int pid, testCommand, returnCommand;
+void command(char** line) {
+    int pid, testCommand;
 
     pid = fork();
     if(pid == 0) {
@@ -17,14 +17,12 @@ int command(char** line) {
         if(testCommand < 0) {
             perror("Unknow command ");
             exit(-1);
-        } else {
-            WEXITSTATUS(returnCommand);
-        }
+        } 
+        exit(0);
     } else {
-        wait(&returnCommand);
+        int returnSon;
+        waitpid(pid, &returnSon, 0);
     }
-    
-    return returnCommand;
 }
 
 #endif

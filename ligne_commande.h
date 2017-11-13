@@ -43,6 +43,6 @@ char* separe_egal(char* str);
 /**
  * Function that execute a command stock in the buffer 
  */
-int command(char** buffer);
+void command(char** buffer);
 
 #endif 
