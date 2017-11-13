@@ -40,4 +40,9 @@ int ligne_vide(char** ligne);
 char* separe_egal(char* str);
 
 
+/**
+ * Function that execute a command stock in the buffer 
+ */
+int command(char** buffer);
+
 #endif 
