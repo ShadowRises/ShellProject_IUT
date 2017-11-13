@@ -50,8 +50,6 @@ int main(int argc, char* argv[]) {
             test = 1;
 
         else {
-
-            // Test if it's an existing command
             command(buffer);
         }
         
