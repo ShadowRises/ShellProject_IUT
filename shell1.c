@@ -9,31 +9,18 @@
 int main(int argc, char* argv[]) {
     char **buffer;
     int test = 0;
-    int testCommand = 0;
-    int pid;
-    int returnCommand;
+    char* path;
 
     printf("Welcome to the Shell1, the alternative shell !\n\n");
 
     do {
-        pid = fork();
-        if(pid == 0) {
-            testCommand = execl("/bin/pwd", "pwd", NULL);
-            if(testCommand == -1) {
-                perror("Error with pwd ");
-                exit(-1);
-            } else {
-                WEXITSTATUS(returnCommand);
-            }
-        } else {
-            wait(&returnCommand);
-        }
+        path = getenv("INVITE");
 
-        if(returnCommand > 0) {
-            exit(-1);
+        if (path != NULL) {
+            printf("%s ~> ", getenv("INVITE"));
+        } else {
+            printf("%s ~> ", getenv("PWD"));
         }
-        
-        printf("~> ");
         fflush(stdout);
         buffer = lis_ligne();
 
