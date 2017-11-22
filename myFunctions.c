@@ -39,11 +39,8 @@ int command(char** line) {
                 perror("Erreur lors de l'ajout de la variable d'environnement ");
                 exit(-1);
             }
-        }
-        
+        }        
     }
-    
-    return returnCommand;
 }
 
 #endif
