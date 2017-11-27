@@ -14,7 +14,7 @@
   
 ## Task list :
   - [x] Exit command
-  - [ ] Basics shell command (cd, mkdir, mv, cp, ...)
-  - [ ] Adding the management of environment variables
+  - [x] Basics shell command (cd, mkdir, mv, cp, ...)
+  - [x] Adding the management of environment variables
   - [ ] Redirections
   - [ ] Pipes
