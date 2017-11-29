@@ -9,11 +9,13 @@
 #include <unistd.h>
 #include <sys/wait.h>
 
-int command(char** line) {
+void command(char** line) {
     int pid, testCommand, returnCommand;
     char* export;
 
     if (strcmp(line[0], "export") != 0){
+        
+
         pid = fork();
         if(pid == 0) {
             testCommand = execvp(line[0], line);
@@ -39,7 +41,7 @@ int command(char** line) {
                 perror("Erreur lors de l'ajout de la variable d'environnement ");
                 exit(-1);
             }
-        }        
+        }
     }
 }
 
