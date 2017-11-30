@@ -11,10 +11,11 @@
   ```
   Ctrl+D
   ```
-  
+
 ## Task list :
   - [x] Exit command
   - [x] Basics shell command (cd, mkdir, mv, cp, ...)
   - [x] Adding the management of environment variables
-  - [ ] Redirections
+  - [x] Redirections
+  - [ ] Background process
   - [ ] Pipes
