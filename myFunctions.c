@@ -42,13 +42,16 @@ void command(char** line) {
                 } else if(strcmp(line[index], "2>>") == 0) {
                     fdRedirect = open(line[index + 1], O_WRONLY | O_APPEND | O_CREAT, 0644);
                     dup2(fdRedirect, 2);
+                } else if(strcmp(line[index], "<") == 0) {
+                    fdRedirect = open(line[index + 1], O_RDWR);
+                    dup2(fdRedirect, 0);
                 }
-
-
+                
                 line[index] = NULL;
                 execvp(line[0], line);
                 close(fdRedirect);
                 WEXITSTATUS(returnCommand);
+
             } else {
                 testCommand = execvp(line[0], line);
                 if(testCommand == -1) {
