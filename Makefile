@@ -1,3 +1,6 @@
+shell1: main
+	rm shell1.o myFunctions.o ligne_commande.o
+
 main: shell1.o myFunctions.o ligne_commande.o
 	gcc -o ./bin/shell1 shell1.o myFunctions.o ligne_commande.o
 
