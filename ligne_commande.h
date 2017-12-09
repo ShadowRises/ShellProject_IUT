@@ -1,6 +1,8 @@
 #ifndef _LIGNE_COMMANDE_V2_H
 #define _LIGNE_COMMANDE_V2_H
 
+#define SIZE_PROCESS 30
+
 /**
  * Cette fonction lit sur l'entrée standard une ligne de texte,
  * la découpe selon les espaces, et retourne un tableau de char*
@@ -41,8 +43,8 @@ char* separe_egal(char* str);
 
 
 /**
- * Function that execute a command stock in the buffer 
+ * Function that execute a command stock in the buffer
  */
-void command(char** buffer);
+void command(char** , int*);
 
-#endif 
+#endif
