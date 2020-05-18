@@ -1,14 +1,14 @@
-shell1: main
-	rm shell1.o myFunctions.o ligne_commande.o
+CC=gcc
+CFLAGS=-Wall -Werror
+BIN=shell1
 
-main: shell1.o myFunctions.o ligne_commande.o
-	gcc -o ./bin/shell1 shell1.o myFunctions.o ligne_commande.o
+all: $(BIN)
 
-shell1.o: shell1.c ligne_commande.h ligne_commande.c
-	gcc -c -Wall shell1.c
+$(BIN): shell1.o myFunctions.o ligne_commande.o
+	$(CC) -o $@ $^
 
-myFunctions.o: ligne_commande.h
-	gcc -c -Wall myFunctions.c
+%.o: %.c
+	$(CC) $(CFLAGS) -o $@ -c $<
 
-ligne_commande.o: ligne_commande.h ligne_commande.c
-	gcc -c -Wall ligne_commande.c
+clean:
+	rm -f *.o $(BIN)
