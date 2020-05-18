@@ -17,5 +17,5 @@
   - [x] Basics shell command (cd, mkdir, mv, cp, ...)
   - [x] Adding the management of environment variables
   - [x] Redirections
-  - [x] Background process
+  - [ ] Background process
   - [ ] Pipes
